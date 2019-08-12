@@ -42,10 +42,9 @@
   .homeNews>span:nth-child(1){
     width: 800px;
     height: 100%;
+    margin-right: 20px;
   }
-  .left:last-child .box{
-    background: yellow;
-  }
+
   .homeNews>span:nth-child(2){
     width: 330px;
     height: 100%;
