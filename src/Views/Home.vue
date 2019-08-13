@@ -448,6 +448,7 @@
     height: 800px;
     width: 1170px;
     margin: 0 auto;
+    /* padding-bottom: 200px; */
   }
   /*.swiper-container*/
   .swiper-container{
@@ -597,10 +598,10 @@
     background-size: cover;margin: 0 auto;
   }
   .partners-bottom p{
-    color: #ffffff;font-size: 36px;text-align: center;padding-top: 50px;
+    color: #ffffff;font-size: 36px;text-align: center;padding-top: 60px;
   }
   .partners-bottom div{
-    margin: 18px auto 0;color: #ffffff;font-size: 22px;width: 90px;
+    margin: 28px auto 0;color: #ffffff;font-size: 22px;width: 90px;
     height: 30px;padding: 5px 50px;border-radius: 20px;cursor: pointer;
     background: -webkit-linear-gradient(left, #DA2ACE , #6326C1);
     background: -o-linear-gradient(right, #DA2ACE,  #6326C1);

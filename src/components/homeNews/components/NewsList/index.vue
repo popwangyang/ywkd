@@ -3,7 +3,7 @@
      <span v-for="(item, index) in dataList" :key="index">
       <Time :item="item" ref="Time"></Time>
     </span>
-    <load @change="getData" :statues="loadStatues"></load>
+    <load @change="getData"></load>
   </div>
 </template>
 
@@ -24,10 +24,7 @@
     },
     methods:{
        getData(){
-        this.loadStatues = '2';
-        setTimeout(() => {
-           this.loadStatues = '1';
-        },2000)
+         this.$router.push({name: 'newDetail'})
       }
     },
     mounted() {

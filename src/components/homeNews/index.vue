@@ -47,8 +47,7 @@
 
   .homeNews>span:nth-child(2){
     width: 330px;
-    height: 100%;
-    background: lightyellow;
+    min-height: 700px;
   }
 
 </style>

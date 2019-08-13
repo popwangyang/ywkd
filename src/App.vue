@@ -22,7 +22,7 @@
     </div>
     <router-view/>
     <div class='footBgc'>
-      <div class='centerWidth'>
+      <div class='centerWidth' style="border: none;">
         <div class='footTop'>
           <section class="floatL">
             <h2>联系我们</h2>
@@ -64,6 +64,10 @@
           <div class='clear'></div>
         </div>
       </div>
+      <div class="centerWidth" style="border: none;">
+        <img src="./assets/images/ywkd_footer_logo.png" alt="" style="width: 178px;height: 40px;">
+        <div class="logoTitle">「打造卡拉OK 娱乐正版新模式」</div>
+      </div>
       <div class='centerWidth'>
         <div class='footRight'>
           Copyright &copy;2016-2017  Yuwang Inc All Rights Reserved 娱网科道 版权所有
@@ -79,7 +83,7 @@
     name: 'App',
     data(){
       return{
-        titleList:['首页','鲸选曲库','鲸易版权','鲸唱蔚蓝','帮助中心',],
+        titleList:['首页','K乐宝','鲸易版权','鲸唱蔚蓝','帮助中心',],
         is_active:'首页',
         logoBox:'logoBox'
       }
@@ -91,7 +95,7 @@
             this.$router.push('Home');
             this.logoBox = 'logoBox';
           break;
-          case '鲸选曲库':
+          case 'K乐宝':
             this.$router.push('Genuine');
             this.logoBox = 'logoBox';
             break;
@@ -118,7 +122,7 @@
           this.logoBox = 'logoBox';
           break;
         case 'Genuine':
-          this.is_active = '鲸选曲库';
+          this.is_active = 'K乐宝';
           this.logoBox = 'logoBox';
           break;
         case 'CopyRight':

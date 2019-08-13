@@ -1,6 +1,9 @@
 <template>
     <div class="box">
       <div class="main">
+        <Klb/>
+
+
         <div class="header">
           <div class="header-title">
             <div class="header-title-top">
@@ -263,6 +266,7 @@
 </template>
 
 <script>
+    import Klb from '@/components/Genuine/Klb.vue'
     import {post,baseJs,token} from "../api/api";
     import 'swiper/dist/css/swiper.css'
     import {swiper,swiperSlide} from 'vue-awesome-swiper'
@@ -270,7 +274,8 @@
       name: "genuine",
       components: {
         swiper,
-        swiperSlide
+        swiperSlide,
+        Klb,
       },
       data() {
         return {
@@ -343,7 +348,8 @@
     background-size: 100% 100%;
     width: 100%;
     height: 1050px;
-    padding-top: 60px;
+    overflow: hidden;
+    /* padding-top: 60px; */
   }
   @media only screen and (max-width: 1650px){
     .header{

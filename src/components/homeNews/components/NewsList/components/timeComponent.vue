@@ -76,7 +76,7 @@
     text-align: right;
   }
   .item{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .item{
     display: flex;
@@ -89,9 +89,6 @@
     height:130px;
     background: skyblue;
     margin-right: 40px;
-  }
-  .item .text{
-
   }
   .title{
     display: block;

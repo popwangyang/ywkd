@@ -14,7 +14,7 @@
     props:{
       index:{
         type: Number,
-        default:1
+        default:6
       }
     },
     data(){
@@ -36,9 +36,13 @@
     height:18px;
     background:rgba(103,203,244,1);
     border-radius:2px;
+    margin: 8px 8px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
   }
   img{
-    width: 33px;
-    height: 33px;
+    width: 24px;
+    height: 20px;
+    margin: 6px 5px;
   }
 </style>

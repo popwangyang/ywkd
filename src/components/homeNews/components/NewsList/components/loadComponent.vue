@@ -20,7 +20,7 @@
     props:{
       statues:{
         type:String,
-        default: '2'
+        default: '1'
       }
     },
     methods:{

@@ -1,10 +1,10 @@
 <template>
   <div class="ItemBox">
     <span>
-        <Head :index="1"/>
-        <span class="name">石楠</span>
+        <Head :index="data.index"/>
+        <span class="name">{{data.name}}</span>
     </span>
-    <span>1.235</span>
+    <span>{{data.number}}</span>
   </div>
 </template>
 
@@ -15,6 +15,7 @@
       Head,
     },
     props:{
+      data:Object,
 
     }
   }
@@ -44,7 +45,7 @@
     line-height:14px;
   }
   .name{
-    margin-left: 10px;
+    margin-left: 5px;
     font-size:14px;
     font-family:PingFangSC-Regular;
     font-weight:400;

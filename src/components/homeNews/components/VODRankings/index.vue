@@ -2,21 +2,35 @@
   <div class="VODRankBox">
     <div class="header">点播排行榜</div>
     <div class="content">
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
+      <div class="title">
+        <span>歌曲名称</span>
+        <span>点播次数</span>
+      </div>
+      <span v-for="(item, index) in dataList" :key="index">
+        <Item :data="item"></Item>
+      </span>
+      <!-- <Load :statues="loadStatues" @change="getData"/> -->
     </div>
   </div>
 </template>
 
 <script>
   import Item from './components/itemComponent'
+  import dataList from '@/assets/js/homeHeXi.js'
+  import Load from './components/loadComponent.vue'
   export default{
     components:{
-      Item
+      Item,
+      Load
+    },
+    data(){
+      return{
+        dataList: dataList.VODData,
+        loadStatues: '1',
+      }
+    },
+    methods:{
+      getData(){}
     }
   }
 </script>
@@ -35,9 +49,27 @@
     background:linear-gradient(90deg,rgba(0,220,255,1) 0%,rgba(0,126,255,1) 100%);
   }
   .content{
-    height: 700px;
+    /* height: 668px; */
     background:#051d46;
     box-sizing: border-box;
     padding: 20px 10px;
+    padding-bottom: 50px;
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    font-size: 14px;
+    color: rgba(255,255,255,1);
+    font-weight: 500;
+    background:linear-gradient(90deg,rgba(0,220,255,1) 0%,rgba(0,126,255,1) 100%);
+  }
+  .title>span:nth-child(1){
+    margin-left: 14px;
+  }
+  .title>span:nth-child(2){
+    width: 82px;
+    display: block;
   }
 </style>

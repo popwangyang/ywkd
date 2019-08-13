@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 //首页
 import Home from '@/Views/Home'
+import newDetail from '@/Views/newDetail'
 //鲸选曲库
 import Genuine from '@/Views/Genuine'
 import Entertainment from '@/Views/Entertainment'
@@ -40,6 +41,11 @@ Vue.use(Router);
       path: '/Home',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/newDetail',
+      name: 'newDetail',
+      component: newDetail,
     },
     {
       path: '/Genuine',
