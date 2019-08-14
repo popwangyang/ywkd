@@ -37,14 +37,14 @@
 
 <style scoped="scoped" lang="less">
   .klb{
-    height: 1800px;
+    height: 1700px;
     background: url('../../assets/images/klb/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 60px;
 
 	.content{
-		 width: 1176px;
+		width: 1176px;
 		height: 100%;
 		margin: 0 auto;
     overflow: hidden;

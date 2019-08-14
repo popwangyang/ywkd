@@ -7,14 +7,10 @@
           <h3>互联网化的VOD 让管理变得简单</h3>
           <p>一站式模块化管理系统</p>
         </div>
-        <div class="main-header-img-container"></div>
-      </div>
-      <!--sing-body-->
-      <div class="main-body">
-        <div class="main-body-container">
+               <div class="main-body-container">
           <div class="main-body-container-title">
-            <h2>鲸唱蔚蓝管理系统5大优势</h2>
-            <p>简洁，整合，一体化、高效灵活的软件系统</p>
+           <!-- <h2>鲸唱蔚蓝管理系统5大优势</h2>
+            <p>简洁，整合，一体化、高效灵活的软件系统</p> -->
             <div class="main-body-container-title-list">
               <ul>
                 <li>
@@ -47,14 +43,18 @@
               </ul>
             </div>
           </div>
-          <div class="main-body-supermarket">
-            <div class="main-body-supermarket-img">
-              <h2>在线超市模块</h2>
-              <p>扫码互联，线上下单</p>
-            </div>
+        </div>
+      </div>
+      <!--sing-body-->
+      <div class="main-body">
+         <div class="main-body-supermarket">
+          <div class="main-body-supermarket-img">
+            <h2>在线超市模块</h2>
+            <p>扫码互联，线上下单</p>
           </div>
         </div>
       </div>
+
       <div class="orders">
         <div class="orders-container">
           <h2>订单及会员管理模块</h2>
@@ -159,7 +159,6 @@
   }
   .main-body{
     width: 100%;
-    padding-top: 400px;
   }
   .main-body-container{
     width: 1200px;
@@ -183,16 +182,14 @@
   .main-body-container-title-list{
     width: 1200px;
     height: 300px;
+    margin-top: 50px;
   }
   .main-body-container-title-list ul li{
     height: 280px;
     width: 228px;
     margin: 0 15px 0 0;
     float: left;
-    background: -webkit-linear-gradient(left, #242764 , #13153C);
-    background: -o-linear-gradient(right, #242764, #13153C);
-    background: -moz-linear-gradient(right, #242764, #13153C);
-    background: linear-gradient(to bottom, #242764 , #13153C);
+   background:linear-gradient(180deg,#05acfd6e 0%, #043ae48a 100%);
   }
   .main-body-container-title-list ul li:nth-of-type(5){
     margin-right: 0;
@@ -244,6 +241,8 @@
     height: 958px;
     margin-top: 50px;
     padding-bottom: 60px;
+    margin: 0 auto;
+    margin-top: 60px;
   }
   .main-body-supermarket-img{
     width: 1200px;

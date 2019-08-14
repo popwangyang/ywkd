@@ -12,7 +12,7 @@
         </div>
       </div>
       <!--正版欢唱，智慧娱乐-->
-      <div class="intelligence">
+<!--      <div class="intelligence">
         <div class="intelligence-container">
           <h2>正版欢唱，智慧娱乐</h2>
           <div class="intelligence-top">
@@ -76,7 +76,17 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+
+
+
+      <BQBox></BQBox>
+
+
+
+
+
+
       <!--娱网云盒2.0-->
       <div class="yw-clouds">
         <div class="yw-clouds-container">
@@ -98,8 +108,12 @@
 </template>
 
 <script>
+   import BQBox from '@/components/Clouds/banquanBox.vue'
     export default {
         name: "clouds",
+        components: {
+          BQBox,
+        },
       methods:{
         goEntertainment(){
           this.$router.push('Entertainment')

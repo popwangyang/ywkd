@@ -141,8 +141,8 @@
     }
   }
 </script>
-
 <style scoped>
+
   /*导航*/
   .nav{
     position: fixed;

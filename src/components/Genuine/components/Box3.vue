@@ -2,7 +2,7 @@
   <div class="KLBbox3">
     <div class="header">卡拉OK内容正版服务合作方案</div>
     <div class="list">
-      <div  v-for="(item, index) in arr" :key="index" class="listItem">
+      <div  v-for="(item, index) in arr" :key="index" class="listItem" ref="listItem" @mouseenter="change(index)">
         <span class="icon">
           <img :src="item.iconUrl" >
         </span>
@@ -30,8 +30,21 @@
         arr: dataList.okdataList
       }
     },
+    methods: {
+      change(num) {
+       this.$refs.listItem.map((item, index) => {
+         if(num == index){
+            this.$refs.listItem[index].classList.add(`listItemHover${index}`)
+            this.contentUrl = this.arr.filter((item, index) => index == num )[0].content;
+         }else{
+            this.$refs.listItem[index].classList.remove(`listItemHover${index}`)
+         }
+       })
+      }
+    },
     mounted() {
-      this.contentUrl = this.arr.filter((item, index) => index==0 )[0].content
+
+      this.change(0);
     }
   }
 </script>
@@ -97,32 +110,27 @@
           color: white;
         }
        }
-       .isSelectItem{
-         height: 240px;
-         transform: scale(1)
-       }
-
        .listItem:nth-child(1){
          background: url('../../../assets/images/klb/saoma-bj.png') no-repeat;
        }
-       .listItem:nth-child(1):hover{
-         background: url('../../../assets/images/klb/saoma-bj1.png') no-repeat;
+       .listItemHover0{
+         background: url('../../../assets/images/klb/saoma-bj1.png') no-repeat !important;
          height: 240px;
          transform: scale(1)
        }
        .listItem:nth-child(2){
          background: url('../../../assets/images/klb/jici-bj.png') no-repeat;
        }
-        .listItem:nth-child(2):hover{
-         background: url('../../../assets/images/klb/jici-bj1.png') no-repeat;
+       .listItemHover1{
+         background: url('../../../assets/images/klb/jici-bj1.png') no-repeat !important;
          height: 240px;
          transform: scale(1)
        }
        .listItem:nth-child(3){
          background: url('../../../assets/images/klb/nianfei-img.png') no-repeat;
        }
-       .listItem:nth-child(3):hover{
-         background: url('../../../assets/images/klb/nianfei-img1.png') no-repeat;
+        .listItemHover2{
+         background: url('../../../assets/images/klb/nianfei-img1.png') no-repeat !important;
          height: 240px;
          transform: scale(1)
        }

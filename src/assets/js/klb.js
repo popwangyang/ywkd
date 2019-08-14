@@ -48,26 +48,21 @@ export default{
   okdataList:[
     {
       iconUrl: require('@/assets/images/klb/okIcon1.png'),
-      noSelectBG: require('@/assets/images/klb/saoma-bj.png'),
-      isSelectBG: require('@/assets/images/klb/saoma-bj1.png'),
       title: '扫码支付',
       text: '每次开包扫码支付 10 元/包厢，卡拉OK 场所/消费者都可以进行扫码支付。',
-      content: require('@/assets/images/klb/table.png'),
-      isSelect: true,
+      content: require('@/assets/images/klb/table.png')
     },
      {
       iconUrl: require('@/assets/images/klb/okIcon2.png'),
       title: '精确计次',
       text: '卡拉OK场所通过预付费的形式支付平台上所需使用的音像节目的许可使用费，平台通过点播计次的方式扣费',
-      content: require('@/assets/images/klb/table.png'),
-      isSelect: false,
+      content: require('@/assets/images/klb/table.png')
     },
      {
       iconUrl: require('@/assets/images/klb/okIcon3.png'),
       title: '年费包干',
       text: '按照双方核定的包间数，经双方协商具体金额、按年度支付本平台所有权利人享有合法权利的音像节目的许可使用费',
-      content: require('@/assets/images/klb/table.png'),
-       isSelect: false,
+      content: require('@/assets/images/klb/table.png')
     }
   ]
 }

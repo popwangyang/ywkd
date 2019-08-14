@@ -35,51 +35,8 @@
       </div>
       <!--sing-body-->
       <div class="sing-body">
-        <div class="sing-body-container">
-          <div class="sing-body-container-top">
-            <div class="sing-body-container-top-left">
-              <div class="sing-body-container-top-left-img"></div>
-            </div>
-            <div class="sing-body-container-top-right">
-              <h2>轻松点歌 比传统 VOD 更快更方便</h2>
-              <h3>拼音点歌、手写点歌、歌星点歌，智能排序，点歌速度比传统</h3>
-              <h3>VOD 快3倍</h3>
-              <ul>
-                <li>歌星智能排序，快速选定心仪歌手。</li>
-                <li>热歌 AI 预测，多种方式一步选中。</li>
-                <li>不知道唱什么?猜你喜欢，一唱就嗨。</li>
-              </ul>
-            </div>
-          </div>
-          <div class="sing-body-container-middle">
-            <div class="sing-body-container-middle-left">
-              <h2>鲸唱个人歌单</h2>
-              <h3>将自己唱过的，喜欢唱的歌统统保存在云端，点歌不用找</h3>
-              <ul>
-                <li>个人历史点播记录全收录</li>
-                <li>曲目云收藏更便捷</li>
-              </ul>
-            </div>
-            <div class="sing-body-container-middle-right">
-              <div class="sing-body-container-middle-right-img"></div>
-            </div>
-          </div>
-          <div class="sing-body-container-bottom">
-            <div class="sing-body-container-bottom-left">
-              <div class="sing-body-container-bottom-left-img"></div>
-            </div>
-            <div class="sing-body-container-bottom-right">
-              <h2>轻松点歌 比传统 VOD 更快更方便</h2>
-              <h3>拼音点歌、手写点歌、歌星点歌，智能排序，点歌速度比传统</h3>
-              <h3>VOD 快3倍</h3>
-              <ul>
-                <li>歌星智能排序，快速选定心仪歌手。</li>
-                <li>热歌 AI 预测，多种方式一步选中。</li>
-                <li>不知道唱什么?猜你喜欢，一唱就嗨。</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <SingList/>
+
         <div class="sing-body-container-bottom-bottom1">
           <div class="sing-body-container-bottom-bottom1-container">
             <div class="sing-body-container-bottom-bottom1-left">
@@ -168,7 +125,11 @@
 </template>
 
 <script>
+  import SingList from '@/components/Sing'
     export default {
+      components: {
+        SingList,
+      },
         name: "Sing"
     }
 </script>

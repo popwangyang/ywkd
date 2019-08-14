@@ -45,51 +45,16 @@
             </div>
           </div>
         </div>
-        <div class="entertainment-container">
-          <section>
-            <div class="entertainment-container-content-left">
-              <div class="entertainment-container-content-left-img"></div>
-            </div>
-            <div class="entertainment-container-content-right">
-              <div class="entertainment-container-content-right-img">
-                <h2>更好玩的场景化游戏体验</h2>
-                <p>互动游戏，挖掘KTV场景全新娱乐方式</p>
+        <div class="dataList">
+          <div class="content">
+            <div class="item" v-for="(item, index) in dataList" :key="index">
+              <div class="icon">
+                <img :src="item.iconUrl">
               </div>
+              <div class="title">{{item.title}}</div>
+              <div class="text">{{item.text}}</div>
             </div>
-          </section>
-          <section>
-            <div class="entertainment-container-content-left">
-              <div class="entertainment-container-content-left-img">
-                <h2>充值送礼</h2>
-                <p>互动送礼，聚乐社交，打通点唱、PK、送礼场景</p>
-              </div>
-            </div>
-            <div class="entertainment-container-content-right">
-              <div class="entertainment-container-content-right-img"></div>
-            </div>
-          </section>
-          <section>
-            <div class="entertainment-container-content-left">
-              <div class="entertainment-container-content-left-img"></div>
-            </div>
-            <div class="entertainment-container-content-right">
-              <div class="entertainment-container-content-right-img">
-                <h2>巨好玩 KTV娱乐新坐标</h2>
-                <p>巨好玩，鲸唱蔚蓝活动赛事入口</p>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="entertainment-container-content-left">
-              <div class="entertainment-container-content-left-img">
-                <h2>麦霸大赛</h2>
-                <p>平台赛事、门店赛事，赛事活动让K歌体验更刺激</p>
-              </div>
-            </div>
-            <div class="entertainment-container-content-right">
-              <div class="entertainment-container-content-right-img"></div>
-            </div>
-          </section>
+          </div>
         </div>
       </main>
     </div>
@@ -97,11 +62,75 @@
 
 <script>
     export default {
-        name: "entertainment"
+        name: "entertainment",
+        data() {
+          return {
+            dataList:[
+              {
+                iconUrl: require('@/assets/images/entertainment/icon1.png'),
+                title: '更好玩的场景化游戏体验',
+                text: '互动游戏，挖掘KTV场景全新娱乐方式'
+              },
+              {
+                iconUrl: require('@/assets/images/entertainment/icon2.png'),
+                title: '充值送礼充值送礼',
+                text: '互动送礼，聚乐社交，打通点唱、PK、送礼场景'
+              },
+              {
+                iconUrl: require('@/assets/images/entertainment/icon3.png'),
+                title: '巨好玩 KTV娱乐新坐标',
+                text: '巨好玩，鲸唱蔚蓝活动赛事入口'
+              },
+              {
+                iconUrl: require('@/assets/images/entertainment/icon4.png'),
+                title: '麦霸大赛',
+                text: '平台赛事、门店赛事，赛事活动让K歌体验更刺激'
+              }
+            ]
+          }
+        },
     }
 </script>
 
 <style scoped>
+  .dataList{
+    width: 100%;
+    height: 700px;
+    background: url('../assets/images/entertainment/listBG.png') no-repeat;
+    background-position: left bottom;
+    overflow: hidden;
+  }
+  .dataList .content{
+    width: 1170px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dataList .content .item{
+    display: block;
+    width: 200px;
+    height: 260px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .icon{
+    widows: 92px;
+    height: 92px;
+  }
+  .title{
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+  }
+  .text{
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+  }
   main{
     padding-top: 60px;
     background-color: #06062A;
