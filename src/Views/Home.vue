@@ -262,7 +262,6 @@
   }
   .main-production-content-container{
     height: 950px;
-    background: yellow;
   }
   .main-production-content-top{
     height: 380px;

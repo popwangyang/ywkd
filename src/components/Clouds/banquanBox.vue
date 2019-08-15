@@ -5,7 +5,9 @@
       <div class="body">
         <span v-for="(item, index) in dataList" :key='index'>
           <span class="topContent">
-            <span class="icon"></span>
+            <span class="icon">
+              <img :src="item.iconUrl" style="height: 100%;">
+            </span>
             <span class="title">{{item.title}}</span>
             <span class="list">
               <div v-for="(item1, index1) in item.list" :key='index1'>{{item1}}</div>
@@ -25,7 +27,7 @@
         dataList:[
           {
             title: '智慧K歌',
-            iconUrl:'',
+            iconUrl:require('@/assets/images/clouds/icon1.png'),
             list:[
               '正版音乐综合服务',
               '曲库云平台',
@@ -34,7 +36,7 @@
           },
           {
             title: '智慧娱乐',
-            iconUrl:'',
+           iconUrl:require('@/assets/images/clouds/icon2.png'),
             list:[
               '更好玩的场景化游戏体验',
               '充值送礼',
@@ -44,7 +46,7 @@
           },
           {
             title: '智慧管理',
-            iconUrl:'',
+            iconUrl:require('@/assets/images/clouds/icon3.png'),
             list:[
               '麦霸大赛',
               '订单及会员管理模块',
@@ -93,7 +95,8 @@
             flex-direction: column;
             justify-content: flex-start;
             .icon{
-              .box(70px, 70px, yellow);
+              .box(70px, 70px);
+              text-align: center;
             }
             .title{
               .fontStyle(18px, white, 100);
@@ -104,7 +107,6 @@
                 .fontStyle(14px, white, 100);
                 line-height: 30px;
                 text-align: left;
-
               }
               div:before{
                 content: " ";

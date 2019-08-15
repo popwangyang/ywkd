@@ -10,6 +10,9 @@ import Entertainment from '@/Views/Entertainment'
 import Clouds from '@/Views/Clouds'
 import Manage from '@/Views/Manage'
 import Sing from '@/Views/Sing'
+import Us from '@/Views/Us'
+import SongList from '@/Views/SongList'
+import Help from '@/Views/Help'
 
 //鲸易版权
 import CopyRight from '@/Views/CopyRight/CopyRight'
@@ -67,10 +70,25 @@ Vue.use(Router);
       name: 'Manage',
       component: Manage,
     },
+     {
+      path: '/Us',
+      name: 'us',
+      component: Us,
+    },
+     {
+      path: '/SongList',
+      name: 'SongList',
+      component: SongList,
+    },
     {
       path: '/Clouds',
       name: 'Clouds',
       component: Clouds,
+    },
+    {
+      path: '/Help',
+      name: 'Help',
+      component: Help,
     },
     {
       path: '/CopyRight',

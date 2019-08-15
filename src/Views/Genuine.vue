@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box" id="Genuine">
       <div class="main">
         <Klb/>
         <KlbQK/>
@@ -9,12 +9,12 @@
           <span class="body"></span>
         </div>
         <div class="klbBox6">
-          <div class="content">
+          <div class="content" >
             <span class="header">卡拉OK版权音乐曲库授权证书</span>
             <span class="body"></span>
             <span class="header" style="margin-bottom: 20px;">软件下载</span>
             <span class="nav">K乐宝同步新歌更新、高清正版曲库、批量便捷操作、高效曲库管理</span>
-            <span class="download">
+            <span class="download" id="ppp">
               <span>
                 <span class="icon"></span>
                 <span class="title">

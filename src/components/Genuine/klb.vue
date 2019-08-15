@@ -11,7 +11,7 @@
         </div>
         <div>打造正版内容新生态，联动娱乐共赢新未来</div>
       </span>
-      <div class="downBtn">下载软件</div>
+      <div class="downBtn" @click="downBtn"><a href="#ppp">下载软件</a></div>
        <Box2></Box2>
        <Box3></Box3>
     </div>
@@ -31,6 +31,13 @@
 
       }
     },
+	methods: {
+		downBtn() {
+			var ele = document.getElementById('app');
+      console.log(ele.scrollHeight)
+      ele.scrollTop = ele.scrollHeight;
+		}
+	},
 
   }
 </script>
@@ -99,6 +106,10 @@
       line-height: 40px;
       font-size: 16px;
       cursor: pointer;
+      a{
+        color: white;
+        text-decoration: none;
+      }
     }
     }
   }

@@ -4,7 +4,7 @@
     <span>
       <span class="item" v-for="(item, index) in list">
         <Item :item='item'>
-          <span class="button">了解详情</span>
+          <span class="button" @click="goPage(index)">了解详情</span>
         </Item>
       </span>
     </span>
@@ -22,7 +22,22 @@
       return{
         list: homeListData.list,
       }
-    }
+    },
+    methods: {
+      goPage(index) {
+        switch (index){
+          case 0:
+          this.$router.push({name: 'Genuine'})
+           break;
+          case 1:
+           this.$router.push({name: 'CopyRight'})
+            break;
+          case 2:
+           this.$router.push({name: 'Clouds'})
+            break;
+        }
+      }
+    },
 
   }
 </script>
@@ -30,7 +45,6 @@
 <style scoped="scoped">
   .box{
     height: 100%;
-    background: #00B0F9;
     position: relative;
   }
   .box > span{
@@ -40,7 +54,7 @@
   .box>span:nth-child(1){
     width:599px;
     height:738px;
-    background:linear-gradient(90deg,rgba(0,220,255,1) 0%,rgba(0,126,255,1) 100%);
+    background:url('../assets/images/face/bg.png') no-repeat;
     opacity:0.8993000000000001;
     top: 106px;
     right: 0;

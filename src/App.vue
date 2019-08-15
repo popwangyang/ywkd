@@ -7,7 +7,7 @@
             <!--<img src="./assets/images/header_logo.png"/>-->
           </div>
           <div class="menu colorfff">
-            <ul>
+            <ul v-if="$route.name != 'Help'">
               <li v-for="m in titleList" :class="{cur:m==is_active}">
                 <a @click="goIndex(m)">{{m}}</a>
                 <div class="underline">
@@ -21,71 +21,53 @@
       </div>
     </div>
     <router-view/>
-    <div class='footBgc'>
-      <div class='centerWidth' style="border: none;">
-        <div class='footTop'>
-          <section class="floatL">
-            <h2>联系我们</h2>
-            <div class="footer-icon-container">
-              <p>Contact us</p>
-              <div class="footer-line"></div>
-            </div>
-            <ul>
-              <li>
-                <b><i></i>公司地址:</b>
-                <span>浙江省杭州市西湖区文二西路808号西溪壹号创意商务中心2号楼2F</span>
-              </li>
-              <li>
-                <b><i class="icon1"></i>公司电话:</b>
-                <span>0571-8110 8912</span>
-              </li>
-              <li>
-                <b><i class="icon2"></i>公司邮箱:</b>
-                <span>YWKEDAO@HLCHANG.CN</span>
-              </li>
-            </ul>
-          </section>
-          <section class="floatL">
-            <h2>招贤纳士</h2>
-            <div class="footer-icon-container">
-              <p>recruit</p>
-              <div class="footer-line"></div>
-            </div>
-            <ul>
-              <li>
-                <b><i></i>HR邮箱:</b>
-                <span>zhejiangth@cneucc.com</span>
-              </li>
-            </ul>
-          </section>
-          <section class='floatR foot-box'>
-            <img src="./assets/images/ywkd_footer.png" alt="娱网科道">
-          </section>
-          <div class='clear'></div>
-        </div>
-      </div>
-      <div class="centerWidth" style="border: none;">
-        <img src="./assets/images/ywkd_footer_logo.png" alt="" style="width: 178px;height: 40px;">
-        <div class="logoTitle">「打造卡拉OK 娱乐正版新模式」</div>
-      </div>
-      <div class='centerWidth'>
-        <div class='footRight'>
-          Copyright &copy;2016-2017  Yuwang Inc All Rights Reserved 娱网科道 版权所有
-        </div>
-        <div class='clear'></div>
-      </div>
-    </div>
+    <Footer :state='logoBox'></Footer>
   </div>
 </template>
 
 <script>
+  import Footer from '@/components/footer'
   export default {
     name: 'App',
+    components: {
+      Footer,
+    },
     data(){
       return{
-        titleList:['首页','K乐宝','鲸易版权','鲸唱蔚蓝','帮助中心',],
+        titleList:['首页','K乐宝','鲸易版权','鲸唱蔚蓝','加入我们','授权歌单'],
         is_active:'首页',
-        logoBox:'logoBox'
+        logoBox:'logoBox',
+        footerState: 0,
+      }
+    },
+    watch: {
+      $route(newValue, oldValue) {
+       switch (newValue.name) {
+           case 'Home':
+             this.is_active = '首页';
+             this.logoBox = 'logoBox';
+             break;
+           case 'Genuine':
+             this.is_active = 'K乐宝';
+             this.logoBox = 'logoBox';
+             break;
+           case 'CopyRight':
+             this.is_active = '鲸易版权';
+             this.logoBox = 'copy-right-logo';
+             break;
+           case 'Clouds':
+             this.is_active = '鲸唱蔚蓝';
+             this.logoBox = 'logoBox';
+             break;
+           case 'Us':
+             this.is_active = '加入我们';
+             this.logoBox = 'logoBox';
+             break;
+           case 'SongList':
+            this.is_active = '授权歌单';
+            this.logoBox = 'logoBox';
+             break;
+         }
       }
     },
     methods:{
@@ -107,8 +89,12 @@
             this.$router.push('Clouds');
             this.logoBox = 'logoBox';
             break;
-          case '帮助中心':
-            this.$router.push('Home');
+          case '加入我们':
+            this.$router.push('Us');
+            this.logoBox = 'logoBox';
+            break;
+          case '授权歌单':
+            this.$router.push('SongList');
             this.logoBox = 'logoBox';
             break;
         }
@@ -133,9 +119,13 @@
           this.is_active = '鲸唱蔚蓝';
           this.logoBox = 'logoBox';
           break;
-        case 'Help':
-          this.is_active = '帮助中心';
+        case 'Us':
+          this.is_active = '加入我们';
           this.logoBox = 'logoBox';
+          break;
+        case 'SongList':
+         this.is_active = '授权歌单';
+         this.logoBox = 'logoBox';
           break;
       }
     }
@@ -183,7 +173,7 @@
   }
   .menu{
     float: right;
-    width: 600px;
+    width: 730px;
     overflow: hidden;
     height: 60px;
     line-height: 60px;
@@ -235,63 +225,7 @@
     border-bottom: 5px solid #da581d;
   }
 
-  /*页脚*/
-  .footBgc{
-    width: 100%;height: auto;
-    display: block;
-    background-color: #000000;
-  }
-  .floatL{
-    float: left;
-  }
-  .floatR{
-    float: right;
-  }
-  .footBgc .centerWidth{
-    border-top: 1px solid #4C156F;
-    width: 1160px;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    overflow: hidden;
-  }
-  .footBgc .centerWidth .footTop{
-    padding: 35px 0;
-    color: #ffffff;
-  }
-  .footBgc .centerWidth .footTop section:nth-of-type(1){
-    width: 420px;
-    margin-right: 69px;
-  }
-  .footBgc h2{
-    font-size: 16px;
-  }
-  .footBgc .footer-icon-container{
-    margin-bottom: 14px;
-  }
-  .footBgc .footer-icon-container p{
-    font-size:10px;
-    color: #a2a4a8;
-  }
-  .footBgc .footer-icon-container .footer-line{
-    width: 35px;
-    height: 2px;
-    background-color: #CA30E1;
-    margin-top: 5px;
-  }
-  .footBgc ul li{
-    font-size: 12px;
-    line-height: 26px;
-    color: #a2a4a8;
-  }
-  .footBgc ul li b{
-    /*color: #ffffff;*/
-  }
-  .foot-box{
-    width: 168px;height: 168px;
-  }
-  .footRight{line-height: 50px;color:#4C156F;font-size: 12px;
-    text-align: center;
-  }
+
 </style>
 <style>
   *{
@@ -312,7 +246,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  height: 100%;
   background-color: #06062A;
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
