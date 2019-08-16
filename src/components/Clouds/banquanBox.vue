@@ -76,6 +76,7 @@
 
 <style scoped="scoped" lang="less">
   @import '../../assets/css/common.less';
+  @images: '../../assets/images/clouds';
   .banquanBox{
     .box(100%, 800px);
     .content{
@@ -91,7 +92,7 @@
           .flexBox(33.3%, 100%, none);
           flex-direction: column;
           .topContent{
-            .flexBox(60%, 60%, red);
+            .flexBox(60%, 60%);
             flex-direction: column;
             justify-content: flex-start;
             .icon{
@@ -144,14 +145,14 @@
           }
         }
         &>span:nth-child(1){
-          background: #0000ff96;
+          background: url('@{images}/bg1.png') no-repeat;
 
         }
         &>span:nth-child(2){
-          background: #00ffc696;
+          background: url('@{images}/bg2.png') no-repeat;
         }
         &>span:nth-child(3){
-          background: #ffca0096;
+          background: url('@{images}/bg3.png') no-repeat;
         }
       }
     }

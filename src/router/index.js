@@ -13,6 +13,7 @@ import Sing from '@/Views/Sing'
 import Us from '@/Views/Us'
 import SongList from '@/Views/SongList'
 import Help from '@/Views/Help'
+import Search from '@/Views/Search'
 
 //鲸易版权
 import CopyRight from '@/Views/CopyRight/CopyRight'
@@ -89,6 +90,11 @@ Vue.use(Router);
       path: '/Help',
       name: 'Help',
       component: Help,
+    },
+    {
+      path: '/Search',
+      name: 'Search',
+      component: Search,
     },
     {
       path: '/CopyRight',

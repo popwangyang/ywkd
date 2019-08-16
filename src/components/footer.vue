@@ -136,6 +136,7 @@
             display: flex;
             justify-content: space-between;
             font-size: 16px;
+            margin-top: 20px;
             &>span{
               display: flex;
               flex-direction: column;
@@ -149,7 +150,7 @@
           .nav{
             .box(400px, 30px);
             display: inline-block;
-            margin-top: 50px;
+            margin-top: 30px;
             line-height: 30px;
             color: white;
             display: flex;
@@ -169,7 +170,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     border-top: 1px solid white;
+     border-top: 1px solid #B1B9C1;
    }
   }
   /*页脚*/

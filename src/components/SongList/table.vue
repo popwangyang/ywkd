@@ -5,7 +5,7 @@
       <span>曲目</span>
       <span>歌手</span>
     </div>
-    <div v-for="(item, index) in arr" :key='index'>
+    <div v-for="(item, index) in data" :key='index'>
       <span>{{item.index}}</span>
       <span>{{item.name}}</span>
       <span>{{item.singer}}</span>
@@ -15,21 +15,10 @@
 
 <script>
     export default {
-      data() {
-        return {
-          arr:[
-            {index: 1, name: '不哭', singer: '林小猛'},
-            {index: 2, name: '不哭', singer: '林小猛'},
-            {index: 3, name: '不哭', singer: '林小猛'},
-            {index: 4, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-            {index: 5, name: '不哭', singer: '林小猛'},
-          ]
-        }
+      props: {
+        data: {
+          type: Array
+        },
       }
     }
 </script>
@@ -51,16 +40,15 @@
         box-sizing: border-box;
       }
       &>span:nth-child(1){
-        width: 40%;
+        width: 30%;
         padding-left: 50px;
       }
       &>span:nth-child(2){
         width: 40%;
-
         padding-left: 10px;
       }
        &>span:nth-child(3){
-        width: 20%;
+        width: 30%;
       }
     }
     &>div[class='head']{

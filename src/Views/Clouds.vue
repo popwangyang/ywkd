@@ -8,85 +8,10 @@
           <h2>卡拉OK数字娱乐云平台</h2>
         </div>
         <div class="main-header-body">
-          <div class="main-header-body-content"></div>
+          <!-- <div class="main-header-body-content"></div> -->
         </div>
       </div>
-      <!--正版欢唱，智慧娱乐-->
-<!--      <div class="intelligence">
-        <div class="intelligence-container">
-          <h2>正版欢唱，智慧娱乐</h2>
-          <div class="intelligence-top">
-            <div class="intelligence-top-container">
-              <div class="intelligence-top-container-left">
-                <div class="intelligence-top-container-left-img"></div>
-              </div>
-              <div class="intelligence-top-container-right">
-                <h3>智慧K歌</h3>
-                <ul>
-                  <li>正版音乐综合服务</li>
-                  <p>鲸唱创新高清音乐综合技术服务平台高清音乐内容保质、保量、保新实现卡拉</p>
-                  <p>OK正版曲库的合法使用。</p>
-                  <li>曲库云平台</li>
-                  <p>卡拉OK 正版曲库云服务一线实力唱片公司鼎力合作极速更新及扩充 KTV 曲</p>
-                  <p>库音乐。</p>
-                  <li>内容风险管控</li>
-                  <p>曲库黑名单筛查，曲库音乐上架审核，曲库数据备案，音乐版权信息识别。</p>
-                </ul>
-                <div class="details-button" @click="goSing">
-                  <a>了解详情</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="intelligence-middle">
-            <div class="intelligence-middle-container">
-              <div class="intelligence-middle-container-left">
-                <h3>智慧娱乐</h3>
-                <ul>
-                  <li>更好玩的场景化游戏体验</li>
-                  <li>充值送礼</li>
-                  <li>巨好玩KTV娱乐新坐标</li>
-                  <li>麦霸大赛</li>
-                </ul>
-                <div class="details-button" @click="goEntertainment">
-                  <a>了解详情</a>
-                </div>
-              </div>
-              <div class="intelligence-middle-container-right">
-                <div class="intelligence-middle-container-right-img"></div>
-              </div>
-            </div>
-          </div>
-          <div class="intelligence-bottom">
-            <div class="intelligence-bottom-container">
-              <div class="intelligence-bottom-container-left">
-                <div class="intelligence-bottom-container-left-img"></div>
-              </div>
-              <div class="intelligence-bottom-container-right">
-                <h3>智慧管理</h3>
-                <ul>
-                  <li>在线超市模块</li>
-                  <li>订单及会员管理模块</li>
-                  <li>手机远程管理</li>
-                </ul>
-                <div class="details-button" @click="goManage">
-                  <a>了解详情</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-
-
       <BQBox></BQBox>
-
-
-
-
-
-
       <!--娱网云盒2.0-->
       <div class="yw-clouds">
         <div class="yw-clouds-container">
@@ -135,7 +60,7 @@
   .main-header{
     height: 845px;
     width: 100%;
-    background: url("../assets/images/clouds/header_bg_01.jpg") no-repeat;
+    background: url("../assets/images/clouds/header_bg_01.png") no-repeat;
     background-size: 100% 100%;
     position: relative;
   }
@@ -172,7 +97,7 @@
     position: absolute;
     bottom: 0;
     left: calc(50% - 600px);
-    background: url("../assets/images/clouds/header_bg_02.png") no-repeat;
+    background: url("../assets/images/clouds/vodbg.png") no-repeat;
     background-size: 100% 100%;
   }
   .main-header-body-content{
@@ -463,5 +388,7 @@
     background: url("../assets/images/clouds/yw_footer_01.jpg") no-repeat;
     background-size: cover;
     margin: 40px auto 0;
+    border-radius: 8px;
+    overflow: hidden;
   }
 </style>

@@ -13,11 +13,6 @@
     <div class="content">
       <img :src="contentUrl" >
     </div>
-    <div class="guizhe">
-      点播歌曲单首播放时长达到1分30秒及以上计为有效点播，点
-      唱时间不足1分秒的不纳入有效歌曲统计及后期费用结算,VOD系统内设置的公
-      播歌曲、广告歌曲、行政公益宣传内容不计入结算统计范围。点播结算时段:每日19:00-23;59 时，其余时段不进行点播次数统计结算。
-    </div>
   </div>
 </template>
 
@@ -138,18 +133,9 @@
     .content{
       margin-top: 60px;
       width: 100%;
-      height: 500px;
       img{
         width: 100%;
         height: 100%;
-      }
-    }
-    .guizhe{
-      color: white;
-      margin-top: 20px;
-      &:before{
-        content: "精确计次有效点播规则：  ";
-        color: #67CBF4;
       }
     }
   }

@@ -5,10 +5,10 @@
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page.sync="currentPage3"
-        :page-size="10"
+        :current-page.sync="page"
+        :page-size="pageSize"
         layout="prev, pager, next, jumper"
-        :total="50">
+        :total="totle">
       </el-pagination>
     </span>
   </div>
@@ -16,17 +16,31 @@
 
 <script>
   export default{
+    props: {
+      totle: {
+        type: Number,
+        default: 0,
+      },
+      pageSize: {
+        type: Number,
+        default: 10,
+      },
+      pageIndex: {
+        type: Number,
+        default: 1,
+      }
+    },
     data() {
       return {
-        currentPage3: 100,
+        page: this.pageIndex
       }
     },
     methods: {
-      handleSizeChange() {
-
+      handleSizeChange(pageSize) {
+        this.$emit('handleSizeChange', pageSize);
       },
-      handleCurrentChange(){
-
+      handleCurrentChange(pageIndex){
+        this.$emit('handleCurrentChange', pageIndex);
       },
     },
   }
@@ -35,7 +49,9 @@
   .PageListBox{
      .el-pager li{
       background: none;
-      color: white;
+      &[class='active']{
+        color: red;
+      }
     }
     .el-pagination .btn-prev, .el-pagination .btn-next{
        background: none;
@@ -46,6 +62,12 @@
     }
     .el-input__inner{
       background: none;
+    }
+    .el-pagination{
+      color: white;
+    }
+    .el-pager li.btn-quicknext, .el-pager li.btn-quickprev{
+      color: white;
     }
     .el-pagination button:disabled{
       background: none !important;

@@ -5,16 +5,19 @@
         <KlbQK/>
         <KlbQD/>
         <div class="klbBox5">
-          <span class="header">精确计次 优于传统</span>
-          <span class="body"></span>
         </div>
         <div class="klbBox6">
           <div class="content" >
             <span class="header">卡拉OK版权音乐曲库授权证书</span>
-            <span class="body"></span>
+            <span class="body">
+              <span>
+                  <span class="title">鲸选曲库 正版授权</span>
+                  <span class="text">我们为授权的卡拉OK 商家提供《卡拉OK 版权音乐曲库授权书》，兹证明该商家经营场所经营过程中所使用的曲库内容均为正版授权。</span>
+              </span>
+            </span>
             <span class="header" style="margin-bottom: 20px;">软件下载</span>
             <span class="nav">K乐宝同步新歌更新、高清正版曲库、批量便捷操作、高效曲库管理</span>
-            <span class="download" id="ppp">
+            <span class="download">
               <span>
                 <span class="icon"></span>
                 <span class="title">
@@ -53,6 +56,7 @@
 
 <style scoped lang="less">
   @import '../assets/css/common.less';
+  @images: '../assets/images/klb/';
    html,body{
     /*overflow: hidden;*/
   }
@@ -61,25 +65,14 @@
     height: 800px;
     overflow: hidden;
     background: url('../assets/images/klb/klbBox4BG.png') no-repeat;
-    span[class='header']{
-      .box(100%, auto);
-      margin-top: 70px;
-      text-align: center;
-      .fontStyle(36px, white, 400);
-      margin-bottom: 80px;
-    }
-    span[class='body']{
-      margin: 0 auto;
-      .box(1170px, 530px, yellow);
-    }
   }
   .klbBox6{
-    .box(100%, 1200px);
+    .box(100%, 1200px, url('../assets/images/klb/klbBox6BG.png') no-repeat);
+    background-position: left bottom;
     .content{
       .content;
       .download{
         .flexBox(100%, 160px);
-
         margin-top: 20px;
         &>span{
           .box(160px, 160px);
@@ -92,7 +85,7 @@
             flex-direction: column;
           .icon{
             .box(50px, 50px, url('../assets/images/klb/download1.png') no-repeat);
-            border: 1px solid black;
+            background-size: contain;
             background-position: center;
             margin-top: 20px;
             margin-bottom: 10px;
@@ -114,6 +107,10 @@
         }
         &>span:nth-child(1){
           margin-right: 30px;
+          .icon{
+            .box(50px, 50px, url('../assets/images/klb/download2.png') no-repeat);
+             background-size: contain;
+          }
         }
       }
       .header{
@@ -126,7 +123,25 @@
         .fontStyle(16px, white, 100);
       }
       .body{
-        .box(100%, 530px, gray);
+        .box(100%, 530px, url('@{images}/bg6.png') no-repeat);
+        background-size: contain;
+        position: relative;
+        &>span{
+          position: absolute;
+          top: 180px;
+          right: 120px;
+          .flexBox(400px, auto);
+          flex-direction: column;
+          align-items: flex-start;
+          .title{
+            display: block;
+            .fontStyle(24px, white, 100);
+            margin-bottom: 20px;
+          }
+          .text{
+            .fontStyle(16px, white, 100);
+          }
+        }
       }
     }
   }
