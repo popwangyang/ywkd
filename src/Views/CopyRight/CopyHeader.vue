@@ -113,9 +113,16 @@
         mouseleave(){
           this.$refs.mySwiper.swiper.autoplay.start()
         },
-				goSearch(){
-				  this.$router.push({name: 'Search1', query:{value: this.input}});	
-				}
+		goSearch(){
+			 if(!!!this.input){
+			  this.$message({
+				message: '请输入需要收搜的内容',
+				type: 'error'
+			  });
+			  return;
+			}
+		  this.$router.push({name: 'Search1', query:{value: this.input}});
+		}
       }
     }
 </script>

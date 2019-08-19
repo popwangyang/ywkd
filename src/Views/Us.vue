@@ -10,26 +10,75 @@
           <div class="title1">请填写信息</div>
           <AreaSelect @message='change'></AreaSelect>
           <div class="form">
-            <el-input  placeholder="请输入场所名称"></el-input>
-            <el-input  placeholder="请输入联系人"></el-input>
-            <el-input  placeholder="请输入联系方式"></el-input>
+            <el-input  placeholder="请输入场所名称" v-model="ktv_name"></el-input>
+            <el-input  placeholder="请输入联系人" v-model="contact_username"></el-input>
+            <el-input  placeholder="请输入联系方式" v-model="contact_phone"></el-input>
           </div>
         </div>
       </div>
-      <div class="btn">立即申请</div>
+      <div class="btn" @click="btn">立即申请</div>
     </div>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
   import AreaSelect from '@/components/Us/Area'
+  import { getPlaceName } from '@/libs/util'
   export default{
     components: {
       AreaSelect,
     },
+    data() {
+      return {
+        ktv_name: '',
+        contact_username: '',
+        contact_phone: '',
+        code: {
+          province_code:'',
+          city_code: '',
+          county_code: '',
+        }
+      }
+    },
     methods: {
       change(code) {
-        console.log(code)
+        this.code = code;
+      },
+      btn(){
+
+        let code = this.code;
+        let flage = true;
+        var regu =/^(1)[3|4|5|7|8][0-9]{9}$/;
+
+        let send_data = {
+          province: getPlaceName(code.province_code),
+          city: getPlaceName(code.city_code),
+          county: getPlaceName(code.county_code),
+          contact_phone: this.contact_phone,
+          contact_username: this.contact_username,
+          ktv_name: this.ktv_name,
+        }
+         for(let key in send_data){
+           console.log()
+          if(send_data[key] == ''){
+            flage = false;
+          }
+        }
+        if(!flage){
+          this.$message.error('请填写完整信息');
+          return;
+        }
+        console.log(regu.test(send_data.contact_phone))
+        if(!regu.test(send_data.contact_phone)){
+           this.$message.error('手机号格式不正确');
+          return;
+        }
+        axios.post('https://pre.bjywkd.com/ktv/joiningmerchants', send_data).then(res => {
+
+        }).catch(err => {
+          this.$message.error('提交失败！');
+        })
       }
     },
   }

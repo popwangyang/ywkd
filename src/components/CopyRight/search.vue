@@ -1,7 +1,7 @@
 <template>
   <div class="searchBox">
     <input v-model="inputValue" type="text" placeholder="请输入您想查找歌曲或者歌手" @input="change">
-    <span class="btn">找版权</span>
+    <span class="btn" @click="search">找版权</span>
   </div>
 </template>
 
@@ -27,7 +27,14 @@
         this.$emit('change', this.inputValue);
       },
       search(){
-        this.$router.push({name: 'Search', query:{value: this.inputValue}});
+         if(!!!this.inputValue){
+          this.$message({
+        	message: '请输入需要收搜的内容',
+        	type: 'error'
+          });
+          return;
+        }
+        this.$emit('search', this.inputValue);
       }
     },
   }

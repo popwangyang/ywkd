@@ -23,14 +23,14 @@
                 <span class="title">
                   K乐宝内容分发平台1.0.1客户端
                 </span>
-                <span class="btn">下载K乐宝</span>
+                <span class="btn" @click="downloadApp">下载K乐宝</span>
               </span>
               <span>
                <span class="icon"></span>
                <span class="title">
                  K乐宝内容分发平台1.0.1使用手册
                </span>
-               <span class="btn" style="background: #FDC424;">下载手册</span>
+               <span class="btn" style="background: #FDC424;" @click="downloadPdf">下载手册</span>
              </span>
             </span>
           </div>
@@ -44,6 +44,7 @@
     import KlbQK from '@/components/Genuine/klbQk.vue'
     import KlbQD from '@/components/Genuine/klbQD.vue'
     import {post,baseJs,token} from "../api/api";
+    import axios from 'axios'
     export default {
       name: "genuine",
       components: {
@@ -51,6 +52,31 @@
         KlbQK,
         KlbQD,
       },
+	  methods: {
+      dosnload(url, file_name){
+        axios.get(url, {
+        	responseType: 'blob'
+        }).then(res => {
+        	var data = res.data
+        	var url = window.URL.createObjectURL(new Blob([data]))
+        	var link = document.createElement('a')
+        	link.href = url
+        	link.setAttribute('download', file_name)
+        	document.body.appendChild(link)
+        	link.click()
+        })
+      },
+	  	downloadApp () {
+          var url = 'https://test.bjywkd.com/ktv_win/Authorization_Library/Master_QZupdate/K乐宝内容分发平台 Setup 1.0.5.exe'
+          var file_name = 'K乐宝内容分发平台 Setup 1.0.5.exe'
+          this.dosnload(url, file_name);
+        },
+		downloadPdf () {
+		   var url = 'https://test.bjywkd.com/ktv_win/Authorization_Library/Master_QZupdate/K乐宝内容分发平台使用手册.pdf'
+		   var file_name = 'K乐宝内容分发平台使用手册.pdf'
+       this.dosnload(url, file_name);
+		  }
+	  },
     }
 </script>
 

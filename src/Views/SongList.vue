@@ -5,7 +5,7 @@
         <div class="boxLeft">
           <div>
             <div style="width:360px">
-              <Search/>
+              <Search @search='search'/>
             </div>
           </div>
           <div>
@@ -76,6 +76,9 @@
       }
     },
     methods: {
+      search(val){
+         this.$router.push({name: 'Search', query:{value: val}});
+      },
       showPdf(){
         let url = this.num+1 +'.pdf';
        window.open('static/pdf/web/viewer.html?file=' + encodeURIComponent(url));

@@ -63,7 +63,7 @@
       </div>
     </div>
     <!--企业新闻-->
-    <div class="page platform-advantage">
+    <div class="page platform-advantage" style="display: none;">
         <div class="platform-advantage-header">
           <!--<img src="./images/face/product01.png" alt="平台优势">-->
           <div class="platform-advantage-header-img"></div>

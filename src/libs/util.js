@@ -18,3 +18,23 @@ export const getMapData = function(code) {
   foo(code, mapData)
   return result
 }
+
+export const getPlaceName = function(code) {
+  let result = null;
+  console.log(code)
+  function foo(code, data) {
+    if (code == '') {
+      result = ''
+      return
+    };
+    data.map(item => {
+      if (item.value == code) {
+        result = item.label
+  		 } else if (item.children) {
+  			 foo(code, item.children)
+  		 }
+    })
+  }
+  foo(code, mapData)
+  return result
+}

@@ -27,7 +27,14 @@
         this.$emit('change', this.inputValue);
       },
       search(){
-        this.$router.push({name: 'Search', query:{value: this.inputValue}});
+        if(!!!this.inputValue){
+          this.$message({
+            message: '请输入需要收搜的内容',
+            type: 'error'
+          });
+          return;
+        }
+        this.$emit('search',  this.inputValue)
       }
     },
   }

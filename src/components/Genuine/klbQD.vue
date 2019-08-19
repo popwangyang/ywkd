@@ -9,7 +9,7 @@
       <div class="body">
         <img :src="item.imgUrl" alt="" v-for="(item, index) in imgArr" :key='index'>
       </div>
-      <span class="btn">查看授权清单</span>
+      <span class="btn" @click="goPage">查看授权清单</span>
     </div>
   </div>
 </template>
@@ -33,7 +33,12 @@
           }
         ]
       }
-    }
+    },
+    methods: {
+      goPage() {
+        this.$router.push({name: 'SongList'});
+      }
+    },
   }
 </script>
 

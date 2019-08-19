@@ -2,7 +2,7 @@
   <div class="SearchBox">
     <div class="content">
       <div class="box1">
-        <Search :value="value"></Search>
+        <Search :value="value" @search="search"></Search>
       </div>
       <div class="box2">
         <div>搜索到 <span>{{value}}</span> 相关歌曲</div>
@@ -34,8 +34,7 @@
         dataList.map(item => {
           let componeny = item.title;
           item.list.map(song => {
-
-            if(song.name == value || song.singer.trim() == value.trim()){
+            if(song.name == value || song.singer == value){
               console.log(song)
               let obj = {
                 name: song.name,

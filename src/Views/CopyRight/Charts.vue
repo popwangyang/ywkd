@@ -32,119 +32,150 @@
               type:'流行指数',
               song_list:[
                 {
-                name:'Tell Me It\'s Over',
-                singer:'Avril Lavigne'
+                name:'十年',
+                singer:'陈奕迅'
               },{
-                name:'像鱼',
-                singer:'王贰浪'
+                name:'小小',
+                singer:'容祖儿'
               },{
-                name:'生僻字',
-                singer:'陈柯宇'
+                name:'听海',
+                singer:'张惠妹'
               },{
-                name:'想象',
-                singer:'摩登兄弟'
+                name:'逆流成河',
+                singer:'许靖韵'
               },{
-                name:'路过人间',
-                singer:'郁可唯'
+                name:'三天三夜',
+                singer:'张惠妹'
               },{
-                name:'天亮以后说再见',
-                singer:'河野'
+                name:'青春、恋爱和意外',
+                singer:'曾乐彤'
+              },{
+                name:'爱得太迟',
+                singer:'古巨基'
+              },{
+                name:'失恋无罪',
+                singer:'A-Lin'
               }]
             },{
               title:'巅峰榜',
               type:'热歌',
               song_list:[
                 {
-                  name:'起风了',
-                  singer:'买辣椒也用券'
+                  name:'十年',
+                  singer:'陈奕迅'
                 },{
-                  name:'盗将行',
-                  singer:'花粥 / 马雨阳'
+                  name:'死了都要爱',
+                  singer:'信乐团'
                 },{
-                  name:'水星记',
-                  singer:'郭顶'
+                  name:'听海',
+                  singer:'张惠妹'
                 },{
-                  name:'写给黄淮',
-                  singer:'解忧邵帅'
+                  name:'黄昏',
+                  singer:'周传雄'
                 },{
-                  name:'可不可以',
-                  singer:'张紫豪'
+                  name:'人来人往',
+                  singer:'陈奕迅'
                 },{
-                  name:'年少有为',
-                  singer:'李荣浩'
+                  name:'One night in北京',
+                  singer:'信乐团'
+                },{
+                  name:'下一站天后',
+                  singer:'TWINS'
+                },{
+                  name:'小小',
+                  singer:'容祖儿'
                 }]
             },{
               title:'巅峰榜',
               type:'新歌',
               song_list:[
                 {
-                  name:'Tell Me It\'s Over',
-                  singer:'Avril Lavigne'
+                  name:'需要你的爱',
+                  singer:'信/F.I.R.'
                 },{
-                  name:'像鱼',
-                  singer:'王贰浪'
+                  name:'初心',
+                  singer:'古巨基'
                 },{
-                  name:'生僻字',
-                  singer:'陈柯宇'
+                  name:'长大',
+                  singer:'容祖儿'
                 },{
-                  name:'想象',
-                  singer:'摩登兄弟'
+                  name:'逆流成河',
+                  singer:'许靖韵'
                 },{
-                  name:'路过人间',
-                  singer:'郁可唯'
+                  name:'青春、恋爱和意外',
+                  singer:'曾乐彤'
                 },{
-                  name:'天亮以后说再见',
-                  singer:'河野'
+                  name:'最美的旋律',
+                  singer:'乔毓明'
+                },{
+				  name:'五十路',
+				  singer:'李克勤'
+				},{
+				  name:'暗里着迷',
+				  singer:'陈家乐'
+				}
+				]
+            },{
+              title:'巅峰榜',
+              type:'粤语',
+              song_list:[
+                {
+                  name:'K歌之王',
+                  singer:'陈奕迅'
+                },
+                {
+                  name:'下一站天后',
+                  singer:'Twins'
+                },
+                {
+                  name:'心淡',
+                  singer:'容祖儿'
+                },
+                {
+                  name:'爱得太迟',
+                  singer:'古巨基'
+                },
+                {
+                  name:'人来人往',
+                  singer:'陈奕迅'
+                },{
+                  name:'陈奕迅',
+                  singer:'李克勤'
+                },{
+                  name:'你快乐吗',
+                  singer:'陈冠希'
+                },{
+                  name:'游乐场',
+                  singer:'谢霆锋'
                 }]
             },{
               title:'巅峰榜',
-              type:'欧美',
+              type:'闽南语',
               song_list:[
                 {
-                  name:'Neon Moon',
-                  singer:'Cigarettes Lavigne'
-                },
-                {
-                  name:'CYBERPUNK',
-                  singer:'Omnia'
-                },
-                {
-                  name:'Tell Me It\'s Over',
-                  singer:'Avril Lavigne'
-                },
-                {
-                  name:'Hope',
-                  singer:'The Chainsmokers'
-                },
-                {
-                  name:'imagine',
-                  singer:'Ariana Grande'
+                  name:'心内事无人知',
+                  singer:'MISS南台湾'
                 },{
-                  name:'Familia',
-                  singer:'Nicki Minaj '
-                }]
-            },{
-              title:'巅峰榜',
-              type:'日韩',
-              song_list:[
-                {
-                  name:'Way Back Home',
-                  singer:'SHAUN'
+                  name:'下一站',
+                  singer:'曾志伦'
                 },{
-                  name:'像鱼',
-                  singer:'IU'
+                  name:'无缘的牵挂',
+                  singer:'陈雷'
                 },{
-                  name:'生僻字',
-                  singer:'金东律 / IU'
+                  name:'已经过去',
+                  singer:'蔡义德/刘依纯'
                 },{
-                  name:'Something',
-                  singer:'George / '
+                  name:'失落的梦',
+                  singer:'陈雷'
                 },{
-                  name:'River Flows in You',
-                  singer:'EXO'
+                  name:'小雨情',
+                  singer:'郭建一'
                 },{
-                  name:'River Flows in You',
-                  singer:'Yiruma'
+                  name:'秀兰玛雅',
+                  singer:'余天龙'
+                },{
+                  name:'故乡月',
+                  singer:'秀兰玛雅'
                 }]
             }]
           }

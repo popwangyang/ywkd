@@ -10,6 +10,9 @@
       <div>{{item.singer}}</div>
       <div>{{item.componeny}}</div>
     </div>
+	<span class="kong" v-if="data.length == 0">
+		 暂无内容
+	</span>
   </div>
 </template>
 
@@ -45,5 +48,9 @@
       background: #266896;
       border-bottom: none;
     }
+	&>span[class='kong']{
+		.flexBox(100%, 300px);
+    color: white;
+	}
   }
 </style>
