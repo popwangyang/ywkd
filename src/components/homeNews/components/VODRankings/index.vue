@@ -6,10 +6,13 @@
         <span>歌曲名称</span>
         <span>点播次数</span>
       </div>
-      <span v-for="(item, index) in dataList" :key="index">
-        <Item :data="item"></Item>
-      </span>
-      <!-- <Load :statues="loadStatues" @change="getData"/> -->
+			<el-carousel trigger="click" height="600px" arrow='never' indicator-position="outside">
+				<el-carousel-item v-for="num in 3" :key="num">
+					<span v-for="(item, index) in dataList.slice((num - 1) * 10, num * 10)" :key="index">
+						<Item :data="item"></Item>
+					</span>
+				</el-carousel-item>
+      </el-carousel>
     </div>
   </div>
 </template>
@@ -52,8 +55,8 @@
     /* height: 668px; */
     background:#051d46;
     box-sizing: border-box;
-    padding: 20px 10px;
-    padding-bottom: 50px;
+    padding: 10px 10px;
+    padding-bottom: 20px;
   }
   .title{
     display: flex;

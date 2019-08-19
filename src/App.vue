@@ -67,6 +67,12 @@
             this.is_active = '授权歌单';
             this.logoBox = 'logoBox';
              break;
+						case 'Search':
+						this.logoBox = 'logoBox';
+							break;
+						case 'Search1':
+						this.logoBox = 'copy-right-logo';
+							break;
          }
       }
     },

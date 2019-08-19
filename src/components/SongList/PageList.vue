@@ -1,6 +1,6 @@
 <template>
   <div class="PageListBox">
-    <span>共922条数据</span>
+    <span>共{{totle}}条数据</span>
     <span>
       <el-pagination
         @size-change="handleSizeChange"

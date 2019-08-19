@@ -5,11 +5,11 @@
       <span>曲目</span>
       <span>歌手</span>
     </div>
-    <div v-for="(item, index) in data" :key='index'>
-      <span>{{item.index}}</span>
-      <span>{{item.name}}</span>
-      <span>{{item.singer}}</span>
-    </div>
+			<div v-for="(item, index) in data" :key='index'>
+				<span>{{item.index}}</span>
+				<span>{{item.name}}</span>
+				<span>{{item.singer}}</span>
+			</div>
   </div>
 </template>
 

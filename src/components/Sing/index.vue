@@ -72,7 +72,7 @@
             margin-bottom: 50px;
             cursor: pointer;
             transform-origin: 0 0;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease-in-out;
             .icon{
               .fontStyle(120px, white, 400);
                 display: inline-block;

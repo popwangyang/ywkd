@@ -49,7 +49,7 @@
       </div>
       <div class='centerWidth'>
         <div class='footRight'>
-          Copyright &copy;2016-2017  Yuwang Inc All Rights Reserved 娱网科道 版权所有
+          Copyright &copy;2016-2019  Yuwang Inc All Rights Reserved 娱网科道 版权所有
         </div>
         <div class='clear'></div>
       </div>
@@ -81,7 +81,7 @@
           </span>
           <span></span>
         </div>
-        <div class="bottom">Copyright ©2017 娱网科道科技有限公司出品</div>
+        <div class="bottom">Copyright ©2019 娱网科道科技有限公司出品</div>
       </div>
     </div>
   </span>
