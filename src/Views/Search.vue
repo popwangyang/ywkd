@@ -34,7 +34,9 @@
         dataList.map(item => {
           let componeny = item.title;
           item.list.map(song => {
-            if(song.name == value || song.singer == value){
+
+            if(song.name == value || song.singer.trim() == value.trim()){
+              console.log(song)
               let obj = {
                 name: song.name,
                 singer: song.singer,
