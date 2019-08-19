@@ -4,9 +4,9 @@
         <div class="copyright-top-title">
           <div class="copyright-top-title-left"></div>
           <div class="copyright-top-title-right">
-            <el-input placeholder="请输入您想查找的版权" v-model="input">
+            <el-input placeholder="请输入您想查找的歌手名和歌曲名" v-model="input">
               <template slot="append">
-                <el-button type="primary">找版权</el-button>
+                <el-button type="primary" @click='goSearch'>找版权</el-button>
               </template>
             </el-input>
           </div>
@@ -113,6 +113,9 @@
         mouseleave(){
           this.$refs.mySwiper.swiper.autoplay.start()
         },
+				goSearch(){
+				  this.$router.push({name: 'Search1', query:{value: this.input}});	
+				}
       }
     }
 </script>

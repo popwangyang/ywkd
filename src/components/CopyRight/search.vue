@@ -1,7 +1,7 @@
 <template>
   <div class="searchBox">
-    <input v-model="inputValue" type="text" placeholder="请输入您想查找的歌曲信息" @input="change">
-    <i class="el-icon-search" @click="search"></i>
+    <input v-model="inputValue" type="text" placeholder="请输入您想查找歌曲或者歌手" @input="change">
+    <span class="btn">找版权</span>
   </div>
 </template>
 
@@ -36,23 +36,24 @@
 <style scoped="scoped" lang="less">
   @import '../../assets/css/common.less';
   .searchBox{
-    .flexBox(100%, 40px, #501C85);
-    border-radius: 20px;
+    .flexBox(100%, 40px);
+    border-radius: 5px;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-left: 20px;
     box-sizing: border-box;
-    i{
-      color: #04C2F1;
-      font-size: 20px;
-      cursor: pointer;
-    }
+	border: 2px solid #326DF2;
+    .btn{
+		.flexBox(80px, 100%, #326DF2);
+		.fontStyle(14px, white, 100);
+		 cursor:pointer;
+	}
     input{
       background: none;
       border: none;
       outline: none;
       width: 70%;
-      caret-color: #f1efef;
-      color: white;
+      caret-color: black;
+      color: black;
     }
   }
 </style>

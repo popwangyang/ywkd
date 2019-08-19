@@ -98,7 +98,7 @@
         <div class="partners-bottom-container">
           <div class="partners-bottom">
             <p>期待您的加入</p>
-            <div>立即入驻</div>
+            <div @click="goUS">立即入驻</div>
           </div>
         </div>
       </div>
@@ -123,7 +123,9 @@
       },
       computed:{},
       methods:{
-
+				goUS(){
+					this.$router.push({name: 'us'})
+				}
       },
       created(){
 

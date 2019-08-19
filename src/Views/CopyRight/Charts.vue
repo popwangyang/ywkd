@@ -2,9 +2,7 @@
     <div class="page">
       <div class="charts-title">
         <h2>排行榜</h2>
-        <div class="charts-title-more">更多
-          <div class="charts-title-more-arrow"></div>
-        </div>
+        <div class="charts-title-more"></div>
       </div>
       <div class="charts-container">
         <ul>

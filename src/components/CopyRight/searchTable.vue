@@ -10,6 +10,9 @@
       <div>{{item.singer}}</div>
       <div>{{item.componeny}}</div>
     </div>
+		<span class="kong" v-if="data.length == 0">
+			 暂无内容
+		</span>
   </div>
 </template>
 
@@ -31,19 +34,24 @@
 		overflow: auto;
     &>div{
       .flexBox(100%, 60px);
-      border-bottom: 1px solid #475293;
+      border-bottom: 1px solid #F1F1F1;
       div{
         flex: 1;
         .flexBox(100%, 100%);
         box-sizing: border-box;
         padding-left: 100px;
         justify-content: flex-start;
-        color: white;
+
+				color: #333333;
       }
     }
     &>div[class='title']{
-      background: #266896;
+      background: #F1F1F1;
       border-bottom: none;
+			color: #666666;
     }
+		&>span[class='kong']{
+			.flexBox(100%, 300px);
+		}
   }
 </style>
