@@ -17,7 +17,7 @@
     "element-china-area-data": "^4.1.0",
     "element-ui": "^2.4.1",
     "pdfjs-dist": "^2.1.266",
-    "plupload": "^2.3.6",
+    "plupload": "^2.3.9",
     "qiniu-js": "^2.5.3",
     "quill-image-extend-module": "^1.1.2",
     "vue": "^2.5.2",
